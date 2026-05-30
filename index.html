@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,19 +13,30 @@
 
 <div class="container">
 
-    <h1>QR Code Generator</h1>
+    <h1>Smart QR Generator</h1>
 
     <input
         type="text"
         id="qrText"
-        placeholder="Masukkan teks atau URL">
+        placeholder="Masukkan URL atau teks">
 
     <button onclick="generateQR()">
         Generate QR
     </button>
 
     <div class="imgBox">
-        <img id="qrImage">
+        <img id="qrImage" alt="QR Code">
+    </div>
+
+    <div class="downloadBox">
+        <button id="downloadBtn">
+            Download QR
+        </button>
+    </div>
+
+    <div class="history">
+        <h3>Riwayat QR</h3>
+        <ul id="historyList"></ul>
     </div>
 
 </div>

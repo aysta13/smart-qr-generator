@@ -1,36 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart QR Generator</title>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-    <link rel="stylesheet" href="style.css">
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#1e293b,#0f172a);
+    padding:20px;
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+.container{
+    width:100%;
+    max-width:450px;
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    text-align:center;
+}
 
-<div class="container">
+h1{
+    margin-bottom:20px;
+    color:#111827;
+}
 
-    <h1>QR Code Generator</h1>
+input{
+    width:100%;
+    height:55px;
+    border:2px solid #e5e7eb;
+    border-radius:10px;
+    padding:0 15px;
+    font-size:15px;
+    outline:none;
+}
 
-    <input
-        type="text"
-        id="qrText"
-        placeholder="Masukkan teks atau URL">
+input:focus{
+    border-color:#2563eb;
+}
 
-    <button onclick="generateQR()">
-        Generate QR
-    </button>
+button{
+    width:100%;
+    height:55px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
 
-    <div class="imgBox">
-        <img id="qrImage">
-    </div>
+button:hover{
+    background:#1d4ed8;
+}
 
-</div>
+.imgBox{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+}
 
-<script src="script.js"></script>
+.imgBox img{
+    max-width:250px;
+    width:100%;
+    display:none;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    padding:10px;
+}
 
-</body>
-</html>
+.downloadBox{
+    display:flex;
+    justify-content:center;
+}
+
+#downloadBtn{
+    display:none;
+    background:#16a34a;
+}
+
+#downloadBtn:hover{
+    background:#15803d;
+}
+
+.history{
+    margin-top:30px;
+    text-align:left;
+}
+
+.history h3{
+    margin-bottom:10px;
+    color:#111827;
+}
+
+#historyList{
+    list-style:none;
+}
+
+#historyList li{
+    background:#f3f4f6;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:8px;
+    cursor:pointer;
+    word-break:break-all;
+    transition:.3s;
+}
+
+#historyList li:hover{
+    background:#dbeafe;
+}
+
+@media(max-width:480px){
+
+    .container{
+        padding:20px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+}
